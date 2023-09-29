@@ -1,0 +1,20 @@
+import random
+comp=["snake","water","gun"]
+random_index=random.randint(0,len(comp)-1)
+random_comp_value=comp[random_index]
+user=input("Enter 'snake','water' or 'gun': ")
+print(f"{user} vs {random_comp_value}")
+if(user == random_comp_value):
+  print("DRAW")
+elif(random_comp_value== "snake" and user=="water"):
+  print("YOU LOSE")
+elif(random_comp_value== "snake" and user=="gun"):
+  print("YOU WIN")
+elif(random_comp_value== "water" and user=="snake"):
+  print("YOU WIN")
+elif(random_comp_value== "water" and user=="gun"):
+  print("YOU LOSE")
+elif(random_comp_value== "gun" and user=="snake"):
+  print("YOU LOSE")
+elif(random_comp_value== "gun" and user=="water"):
+  print("YOU WIN")
